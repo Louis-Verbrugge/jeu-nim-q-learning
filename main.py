@@ -95,11 +95,6 @@ def addStat(robotWin, historiqueGame):
 
 stat = {}  
 
-print(stat.get("test"))
-
-
-
-
 robot1 = Robot("robot1")
 robot2 = Robot("robot2")
 
@@ -129,8 +124,8 @@ for nombreGame in range(NOMBRE_ENTRAINEMENT):
 
     stat = addStat(robotWin, historiqueGame)
 
-    if nombreGame % 100000 == 0:
-        print(f"Nombre de parties : {nombreGame}")
+    if nombreGame % (NOMBRE_ENTRAINEMENT/10) == 0:
+        print(f"Nombre de parties : {nombreGame*100/NOMBRE_ENTRAINEMENT} %") 
 
 # print(stat)
 print(stat.get(1))
@@ -142,10 +137,11 @@ for elem in stat:
     
     moyenneVictoire[elem] = sum(stat[elem]) / len(stat[elem])
 
-print("\n\n\n\n\n\n\nSTAT\n\n\n\n\n")
+print("\nSTAT\n")
 for elem in dict(reversed(sorted(moyenneVictoire.items()))):
     print(f"{elem} : {moyenneVictoire[elem]}")
 
+print("\n\n\n\n\n\n")
     
 # go play with the robot
 win = "joueur"

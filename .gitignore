@@ -1,0 +1,13 @@
+# Ignorer l'environnement virtuel
+./venv/
+
+# Ignorer les fichiers ou dossiers de données
+./data/
+
+# Ignorer les fichiers Python compilés
+*.pyc
+*.pyo
+
+# Ignorer les fichiers de cache de l'IDE (par exemple PyCharm, VS Code)
+.idea/
+.vscode/
