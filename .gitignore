@@ -1,5 +1,6 @@
 # Ignorer l'environnement virtuel
 ./venv/
+.gitignore
 
 # Ignorer les fichiers ou dossiers de données
 ./data/
